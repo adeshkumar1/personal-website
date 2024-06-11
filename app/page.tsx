@@ -2,6 +2,7 @@ import Navigation from "./components/Navigation";
 import ThreeScene from "./components/ThreeScene";
 import Image from "next/image";
 import placeholder from "../public/placeholder.svg";
+import Footer from "./components/Footer";
 
 export default function Home() {
    return (

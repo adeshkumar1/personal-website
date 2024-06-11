@@ -1,6 +1,15 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+// core styles are required for all packages
+import '@mantine/core/styles.css';
+
+// other css files are required only if
+// you are using components from the corresponding package
+// import '@mantine/dates/styles.css';
+// import '@mantine/dropzone/styles.css';
+// import '@mantine/code-highlight/styles.css';
+// ...
 
 const inter = Inter({ subsets: ["latin"] });
 
