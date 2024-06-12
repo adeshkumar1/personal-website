@@ -36,15 +36,15 @@ const Part = () => {
          background: {
             color: {
                z: -1,
-               value: "#36454F",
-               opacity: 0.5,
+               value: "#000",
+               opacity: 0,
             },
          },
          fpsLimit: 240,
          interactivity: {
             events: {
                onClick: {
-                  enable: true,
+                  enable: false,
                   mode: "push",
                },
                onHover: {

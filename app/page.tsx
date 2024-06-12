@@ -2,45 +2,28 @@
 import Navigation from "./components/Navigation";
 import FooterSocial from "./components/Footer/FooterSocial";
 import Part from "./components/Particles";
-import Code from "./components/Code";
-import CodeEdit from "./components/CodeEditor";
-
 import { useEffect, useState, useCallback } from "react";
+import { twMerge } from "tailwind-merge";
+import { TextGenerateEffect } from "./components/text";
+import Skills from "./components/Skills";
 
 export default function Home() {
-   const [code, setCode] = useState<string>(
-      `#include <iostream>\nint main() {\n  std::cout << "Hello, world!" << std::endl;\n  return 0;\n}`
-   );
-
-   const handleCodeChange = useCallback((newCode: string) => {
-      setCode(newCode);
-   }, []);
-
-   useEffect(() => {
-      console.log("page rendered");
-   }, []);
-
    return (
-      <div className="text-white select-none background-transparent">
-         <Part />
-         <div className="flex flex-col space-y-4 justify-center w-screen">
-            <Navigation />
-            <div className="flex justify-center items-center mt-40">
-               <h1 className="text-2xl">
-                  Hi 👋 My Name is Adesh Kumar, I&apos;m currently studying CS @
-                  UIUC
-               </h1>
-            </div>
-
-            <CodeEdit value={code} onChange={handleCodeChange} />
-
-            <div>
-               <h1 className="text-2xl text-center mt-4">
-                  I&apos;m a software engineer who loves to build things
-               </h1>
-            </div>
+      <div className="min-h-screen w-full dark:bg-black bg-[#FAF9F6]  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex flex-col items-center justify-center">
+         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] text-white">
+            <Part />
          </div>
-         <FooterSocial />
+         <Navigation />
+         <div className="flex flex-col justify-center space-y-96 py-16">
+            <TextGenerateEffect
+               words="Hi My Name is Adesh Kumar, I'm currently studying Computer
+              Science @ UIUC"
+               className="text-white text-2xl antialiased"
+            />
+         </div>
+         <div className="fixed bottom-0 w-full z-10">
+            <FooterSocial />
+         </div>
       </div>
    );
 }

@@ -22,13 +22,18 @@
     "@types/codemirror": "^5.60.15",
     "@types/three": "^0.165.0",
     "@uiw/react-codemirror": "^4.22.2",
+    "clsx": "^2.1.1",
     "codemirror": "^6.0.1",
+    "framer-motion": "^11.2.10",
+    "mini-svg-data-uri": "^1.4.4",
     "next": "14.2.3",
+    "next-themes": "^0.3.0",
     "prism-react-renderer": "^2.3.1",
     "react": "^18",
     "react-code-block": "^1.0.0",
     "react-code-blocks": "^0.1.6",
     "react-dom": "^18",
+    "tailwind-merge": "^2.3.0",
     "three": "^0.165.0"
   },
   "devDependencies": {

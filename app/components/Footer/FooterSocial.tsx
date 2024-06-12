@@ -12,7 +12,6 @@ export default function FooterSocial() {
    return (
       <div className={classes.footer}>
          <Container className={classes.inner}>
-            Adesh Kumar
             <Group
                gap={0}
                className={classes.links}
