@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import Navigation from "./components/Navigation";
 import FooterSocial from "./components/Footer/FooterSocial";
 import Part from "./components/Particles";
-import Part1 from "./components/Particles1";
 import { TextGenerateEffect } from "./components/text";
 
 export default function Home() {
