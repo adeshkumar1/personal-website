@@ -10,7 +10,7 @@ const Navigation = () => {
       {/* <div className="hover:cursor-pointer font-bold">Projects</div>
          <div className="hover:cursor-pointer font-bold">Technologies</div>
          <div className="hover:cursor-pointer mr-4 font-bold">Skills</div> */}
-      <div className="scale-75 hover:scale-90 ">
+      <div className="scale-75 hover:cursor-pointer">
         <DarkModeToggle />
       </div>
     </div>

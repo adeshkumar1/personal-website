@@ -23,6 +23,7 @@ export default function FooterSocial() {
               <IconBrandGithub
                 style={{ width: rem(18), height: rem(18) }}
                 stroke={1.5}
+                className="dark:text-white text-black"
               />
             </Link>
           </ActionIcon>
@@ -31,6 +32,7 @@ export default function FooterSocial() {
               <IconBrandLinkedin
                 style={{ width: rem(18), height: rem(18) }}
                 stroke={1.5}
+                className="dark:text-white text-black"
               />
             </Link>
           </ActionIcon>
@@ -39,6 +41,7 @@ export default function FooterSocial() {
               <IconBrandLeetcode
                 style={{ width: rem(18), height: rem(18) }}
                 stroke={1.5}
+                className="dark:text-white text-black"
               />
             </Link>
           </ActionIcon>
