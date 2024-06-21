@@ -13,7 +13,7 @@ export default function Home() {
         <div className="absolute top-0 z-40 w-screen">
           <Navigation />
         </div>
-        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black  dark:[mask-image:radial-gradient(ellipse_at_center,transparent_20%,white)] text-white [mask-image:radial-gradient(ellipse_at_center,transparent_0%,rgba(0,0,50,0.5))]">
+        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black dark:[mask-image:radial-gradient(ellipse_at_center,transparent_20%,white)] text-white [mask-image:radial-gradient(ellipse_at_center,transparent_2%,rgba(10,10,50,0.5))]">
           <Part />
         </div>
         <TextGenerateEffect
