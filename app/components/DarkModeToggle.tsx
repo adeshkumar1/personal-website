@@ -15,7 +15,7 @@ const DarkModeToggle = () => {
   };
 
   return (
-    <>
+    <div id="DarkModeToggle">
       <svg width="30" height="30" id="light-icon" className="scale-0 dark:scale-100 transition-transform absolute -left-8" onClick={toggleDarkMode}>
         <circle cx="15" cy="15" r="6" fill="currentColor" />
 
@@ -48,7 +48,7 @@ const DarkModeToggle = () => {
           A 12 12 0 0 1 23, 5"
         />
       </svg>
-    </>
+    </div>
   );
 };
 
