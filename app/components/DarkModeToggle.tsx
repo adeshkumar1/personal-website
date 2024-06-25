@@ -16,7 +16,13 @@ const DarkModeToggle = () => {
 
   return (
     <div id="DarkModeToggle">
-      <svg width="30" height="30" id="light-icon" className="scale-0 dark:scale-100 transition-transform absolute -left-8" onClick={toggleDarkMode}>
+      <svg
+        width="30"
+        height="30"
+        id="light-icon"
+        className="scale-0 dark:scale-100 transition-transform absolute -left-8"
+        onClick={toggleDarkMode}
+      >
         <circle cx="15" cy="15" r="6" fill="currentColor" />
 
         <line
@@ -39,7 +45,13 @@ const DarkModeToggle = () => {
         <use href="#ray" transform="rotate(315 15 15)" />
       </svg>
 
-      <svg width="30" height="30" id="dark-icon" className="scale-100 dark:scale-0 transition-all fixed -left-8" onClick={toggleDarkMode}>
+      <svg
+        width="30"
+        height="30"
+        id="dark-icon"
+        className="scale-100 dark:scale-0 transition-all fixed -left-8"
+        onClick={toggleDarkMode}
+      >
         <path
           fill="black"
           d="

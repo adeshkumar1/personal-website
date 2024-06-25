@@ -6,7 +6,6 @@ import Part from "./components/Particles";
 import { TextGenerateEffect } from "./components/text";
 
 export default function Home() {
-
   return (
     <>
       <div className="min-h-screen w-full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex flex-col items-center justify-center">
@@ -17,9 +16,9 @@ export default function Home() {
           <Part />
         </div>
         <TextGenerateEffect
-          words="Hi My Name is Adesh Kumar, I'm currently studying Computer
+          words="Hi I'm Adesh Kumar, and I'm currently studying Computer
               Science @ UIUC"
-          className="text-center p-4"
+          className="text-center p-4 z-50"
         />
         <div className="absolute bottom-0 w-screen">
           <FooterSocial />
