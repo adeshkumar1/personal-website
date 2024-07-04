@@ -6,6 +6,10 @@ import Part from "./components/Particles";
 import { TextGenerateEffect } from "./components/text";
 
 export default function Home() {
+  useEffect(() => {
+    const classList = document.documentElement.classList;
+    classList.add("dark");
+  }, []);
   return (
     <>
       <div className="min-h-screen w-full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex flex-col items-center justify-center">
