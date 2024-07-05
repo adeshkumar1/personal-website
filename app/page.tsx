@@ -34,12 +34,15 @@ export default function Home() {
         </div>
         <div id="MainText">
           <TextGenerateEffect
-            words="Hi I'm Adesh Kumar, and I'm currently studying Computer
+            words="Hi I'm Adesh Kumar, a Junior studying Computer
               Science @ UIUC"
             className="text-center p-4 mt-[40vh]"
           />
         </div>
-        <div className="dark:text-white text-black lg:w-[60%] md:w-[50%] w-[80%] text-center">
+        <div
+          id="aboutme"
+          className="dark:text-white text-black lg:w-[60%] md:w-[50%] w-[80%] text-center"
+        >
           I have extensive experience in full-stack development and a strong
           passion for software engineering. I love problem-solving and I am
           dedicated to delivering robust solutions to engaging problems.{" "}
