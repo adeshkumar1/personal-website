@@ -36,7 +36,7 @@ export default function Home() {
           <TextGenerateEffect
             words="Hi I'm Adesh Kumar, a Junior studying Computer
               Science @ UIUC"
-            className="text-center p-4 mt-[40vh]"
+            className="text-center p-4 md:mt-[40vh] mt-[30vh]"
           />
         </div>
         <div
