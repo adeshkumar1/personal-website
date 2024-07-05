@@ -16,6 +16,7 @@ const Part = () => {
   const [init, setInit] = useState(false);
   // Run only once per application lifetime
   useEffect(() => {
+    console.log(themeableContainer);
     initParticlesEngine(async (engine) => {
       // Initialize the tsParticles instance (engine), adding custom shapes or presets
       await loadSlim(engine); // Load the slim version of the particles engine
@@ -92,7 +93,7 @@ const Part = () => {
         {
           name: "light",
           default: {
-            value: true,
+            value: false,
             mode: "light",
           },
           options: {

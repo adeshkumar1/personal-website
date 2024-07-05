@@ -11,7 +11,6 @@ const DarkModeToggle = () => {
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
-    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
   };
 
   return (

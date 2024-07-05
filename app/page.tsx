@@ -19,10 +19,6 @@ import HT_ML from "../public/HTML5 logo wordmark.png";
 import Image from "next/image";
 
 export default function Home() {
-  useEffect(() => {
-    const classList = document.documentElement.classList;
-    classList.add("dark");
-  }, []);
   return (
     <>
       <div className="min-h-screen w-full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex flex-col justify-start items-center">
@@ -83,7 +79,7 @@ export default function Home() {
               <Image src={Docker} alt="" className="p-[12px] w-16 "></Image>
             </div>
             <div className="m-4 h-16 w-20 rounded-full bg-gray-900 flex justify-center items-center border dark:border-white border-black hover:scale-110 transition-all">
-              <Image src={HT_ML} alt="" className="p-[12px] w-16 "></Image>
+              <Image src={MongoDB} alt="" className="p-[12px] w-16 "></Image>
             </div>
           </div>
         </div>
