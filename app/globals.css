@@ -4,6 +4,8 @@
 
 body {
   @apply font-sans;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 /* 
@@ -34,4 +36,8 @@ body {
 
 .Background {
   user-select: none;
+}
+
+#MainText {
+  z-index: 20;
 }
