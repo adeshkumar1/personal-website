@@ -8,17 +8,9 @@ body {
   overflow-x: hidden;
 }
 
-/* 
-.Background {
-   height: 100vh;
-   width: 100vw;
-   background: rgb(255, 206, 206);
-   background: linear-gradient(
-      90deg,
-      rgba(255, 206, 206, 1) 0%,
-      rgba(158, 230, 255, 1) 100%
-   );
-} */
+#nav {
+  z-index: 100;
+}
 
 #tsparticles {
   position: fixed;
@@ -45,15 +37,22 @@ body {
 @keyframes example {
   from {
     opacity: 0;
-    transform: scale(0.75); /* Starting state */
   }
   to {
     opacity: 1;
-    transform: scale(1); /* Final state */
   }
 }
 
 #aboutme {
   opacity: 0;
-  animation: example 1s ease-in forwards; /* Apply the animation */
+  animation: example 2s ease-in forwards; /* Apply the animation */
+}
+#learnmore {
+  opacity: 0;
+  animation: example 2s ease-in forwards; /* Apply the animation */
+}
+
+#projects {
+  opacity: 0;
+  animation: example 2s ease-in forwards; /* Apply the animation */
 }

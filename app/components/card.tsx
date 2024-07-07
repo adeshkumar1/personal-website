@@ -1,5 +1,7 @@
 "use client";
 
+import { IconBrandGithub } from "@tabler/icons-react";
+
 import physics from "../../public/physics.png";
 import skinmatch from "../../public/skinmatch.png";
 import nchsbusap from "../../public/nchsbusapp.png";
@@ -11,7 +13,7 @@ import Link from "next/link";
 const ThreeDCardDemo = ({ project }: { project: string }) => {
   return (
     <CardContainer className="inter-var">
-      <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] rounded-xl p-6 border w-[300px] h-[300px] flex flex-col justify-between">
+      <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl  dark:bg-black dark:border-white/[0.2] border-black/[0.1] rounded-xl p-6 border w-[300px] h-[300px] flex flex-col justify-between">
         <CardItem
           translateZ="50"
           className="text-xl font-bold text-neutral-600 dark:text-white"
@@ -43,7 +45,11 @@ const ThreeDCardDemo = ({ project }: { project: string }) => {
           }
           className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
         >
-          {project}
+          <div className="flex justify-center">
+            <IconBrandGithub style={{ width: 18, height: 18 }} stroke={1.5} />
+            &nbsp;
+            <div className="">link</div>
+          </div>
         </CardItem>
       </CardBody>
     </CardContainer>

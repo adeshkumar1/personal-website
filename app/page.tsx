@@ -4,21 +4,15 @@ import Navigation from "./components/Navigation";
 import FooterSocial from "./components/Footer/FooterSocial";
 import Part from "./components/Particles";
 import { TextGenerateEffect } from "./components/text";
-import Card from "./components/card";
-import Cpp from "../public/C++ Logo.svg.png";
-import Python from "../public/Python logo.png";
-import TypeScript from "../public/Typescript logo 2020.svg.png";
-import TailWind from "../public/Tailwind CSS Logo.png";
-import Git from "../public/Git logo.png";
 import React from "../public/React logo.png";
-import MongoDB from "../public/MongoDB Logo.png";
-import Java from "../public/Java Logo 1511x2048.png";
-import NodeJS from "../public/Node.js logo.svg";
-import Docker from "../public/Docker Logo 2013.png";
-import HT_ML from "../public/HTML5 logo wordmark.png";
-import Image from "next/image";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
 
 export default function Home() {
+  const scrollDown = () => {
+    window.scrollBy({ top: 600, behavior: "smooth" });
+  };
+
   return (
     <>
       <div className="min-h-screen w-full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex flex-col justify-start items-center">
@@ -43,53 +37,28 @@ export default function Home() {
           passion for software engineering. I love problem-solving and I am
           dedicated to delivering robust solutions to engaging problems.{" "}
         </div>
-        <div className="dark:text-white text-black font-bold text-xl mt-10">
+        <div
+          id="learnmore"
+          className="dark:text-white text-black font-bold text-xl mt-10 hover:cursor-pointer"
+          onClick={scrollDown}
+        >
           Learn more ↓
         </div>
 
-        <div className="dark:text-white text-black mt-[60vh] text-2xl font-bold flex flex-col items-center">
+        <div
+          className="dark:text-white text-black mt-[60vh] text-2xl font-bold flex flex-col items-center"
+          id="skills"
+        >
           <div className="-mb-8">Skills.</div>
 
-          <div className="mt-12 grid lg:grid-cols-5 md:grid-cols-4 grid-cols-2 justify-items-center w-[70vw]">
-            <div className="m-4 h-16 w-20 rounded-3xl bg-gray-900 flex justify-center items-center border dark:border-white border-black hover:scale-110 transition-all">
-              <Image src={Cpp} alt="" className=" p-[12px] w-16 "></Image>
-            </div>
-            <div className="m-4 h-16 w-20 rounded-full bg-gray-900 flex justify-center items-center border dark:border-white border-black hover:scale-110 transition-all">
-              <Image src={Python} alt="" className="p-[12px] w-16 "></Image>
-            </div>
-            <div className="m-4 h-16 w-20 rounded-full bg-gray-900 flex justify-center items-center border dark:border-white border-black hover:scale-110 transition-all">
-              <Image src={React} alt="" className="p-[12px] w-16 "></Image>
-            </div>
-            <div className="m-4 h-16 w-20 rounded-full bg-gray-900 flex justify-center items-center border dark:border-white border-black hover:scale-110 transition-all">
-              <Image src={TypeScript} alt="" className="p-[12px] w-16 "></Image>
-            </div>
-            <div className="m-4 h-16 w-20 rounded-full bg-gray-900 flex justify-center items-center border dark:border-white border-black hover:scale-110 transition-all">
-              <Image src={Git} alt="" className="p-[12px] w-16 "></Image>
-            </div>
-            <div className="m-4 h-16 w-20 rounded-full bg-gray-900 flex justify-center items-center border dark:border-white border-black hover:scale-110 transition-all">
-              <Image src={Java} alt="" className="p-[12px] w-16 "></Image>
-            </div>
-            <div className="m-4 h-16 w-20 rounded-full bg-gray-900 flex justify-center items-center border dark:border-white border-black hover:scale-110 transition-all">
-              <Image src={NodeJS} alt="" className="p-[12px] w-16 "></Image>
-            </div>
-            <div className="m-4 h-16 w-20 rounded-full bg-gray-900 flex justify-center items-center border dark:border-white border-black hover:scale-110 transition-all">
-              <Image src={TailWind} alt="" className="p-[12px] w-16 "></Image>
-            </div>
-            <div className="m-4 h-16 w-20 rounded-full bg-gray-900 flex justify-center items-center border dark:border-white border-black hover:scale-110 transition-all">
-              <Image src={Docker} alt="" className="p-[12px] w-16 "></Image>
-            </div>
-            <div className="m-4 h-16 w-20 rounded-full bg-gray-900 flex justify-center items-center border dark:border-white border-black hover:scale-110 transition-all">
-              <Image src={MongoDB} alt="" className="p-[12px] w-16 "></Image>
-            </div>
-          </div>
+          <Skills />
         </div>
-        <div className="text-2xl font-bold dark:text-white text-black -mb-24 mt-40">
-          Projects.
-        </div>
-        <div className="mt-14 grid justify-center space-x-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
-          <Card project="skinmatch" />
-          <Card project="NCHS Bus App" />
-          <Card project="Physics" />
+        <div
+          id="projects"
+          className="dark:text-white text-black mt-40 text-2xl font-bold flex flex-col items-center -space-y-8"
+        >
+          <div>Projects.</div>
+          <Projects />
         </div>
 
         <div className=" bottom-0 w-screen">
