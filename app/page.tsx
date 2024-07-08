@@ -10,7 +10,9 @@ import Projects from "./components/Projects";
 
 export default function Home() {
   const scrollDown = () => {
-    window.scrollBy({ top: 600, behavior: "smooth" });
+    document
+      .getElementById("skills")
+      ?.scrollIntoView({ behavior: "smooth", block: "center" });
   };
 
   return (

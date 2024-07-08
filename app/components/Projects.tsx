@@ -5,7 +5,7 @@ export default function Projects() {
   return (
     <div ref={gridRef} id="projects" className="mt-40 w-full ">
       <div
-        className="flex justify-center space-x-8"
+        className="flex md:flex-row lg:flex-row sm:flex-col justify-center space-x-8"
         style={{
           gap: "20px", // Adds spacing between children
           opacity: 0,
