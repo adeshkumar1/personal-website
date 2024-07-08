@@ -13,7 +13,7 @@ const Experience: React.FC = () => {
   const [isIntersecting, gridRef] = useIntersectionObserver({ threshold: 0.1 });
 
   return (
-    <div ref={gridRef}>
+    <div ref={gridRef} className="scale-90">
       <VerticalTimeline
         animate={false}
         className="vertical-timeline--red"

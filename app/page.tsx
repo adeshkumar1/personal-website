@@ -18,7 +18,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="min-h-screen w-full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex flex-col justify-start items-center">
+      <div className="overflow-hidden min-h-screen w-full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex flex-col justify-start items-center">
         <div className="absolute top-0 z-40 w-screen">
           <Navigation />
         </div>
@@ -52,7 +52,7 @@ export default function Home() {
           id="experience"
           className="dark:text-white text-black mt-[60vh] text-2xl font-bold flex flex-col items-center -space-y-8"
         >
-          <div className="m-10">Experiences.</div>
+          <div className="m-8">Experiences.</div>
           <Experience />
         </div>
 
@@ -67,7 +67,7 @@ export default function Home() {
 
         <div
           id="projects"
-          className="dark:text-white text-black mt-40 text-2xl font-bold flex flex-col items-center -space-y-8"
+          className="dark:text-white text-black mt-[30vh] text-2xl font-bold flex flex-col items-center -space-y-8"
         >
           <div>Projects.</div>
           <Projects />
