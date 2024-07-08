@@ -12,7 +12,7 @@ const Navigation = () => {
       id="Nav"
     >
       <div
-        className="hover:cursor-pointer ml-4 flex justify-center items-center font-semibold dark:text-white text-black rounded-full p-[10px] border dark:border-white border-black"
+        className="hover:cursor-pointer lg:ml-4 md:ml-4 flex justify-center items-center font-semibold dark:text-white text-black rounded-full p-[10px] border dark:border-white border-black"
         onClick={(e) => handleClick("MainText")}
       >
         Adesh Kumar
