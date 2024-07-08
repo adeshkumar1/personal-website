@@ -19,7 +19,11 @@ export default function FooterSocial() {
           wrap="nowrap"
         >
           <ActionIcon size="lg" color="gray" variant="subtle">
-            <Link href="http://github.com/adeshkumar1" target="_blank" className="hover:scale-110">
+            <Link
+              href="http://github.com/adeshkumar1"
+              target="_blank"
+              className="hover:scale-110"
+            >
               <IconBrandGithub
                 style={{ width: rem(18), height: rem(18) }}
                 stroke={1.5}
@@ -28,7 +32,11 @@ export default function FooterSocial() {
             </Link>
           </ActionIcon>
           <ActionIcon size="lg" color="gray" variant="subtle">
-            <Link href="http://linkedin.com/in/adesh-kumar2" target="_blank" className="hover:scale-110">
+            <Link
+              href="http://linkedin.com/in/adesh-kumar2"
+              target="_blank"
+              className="hover:scale-110"
+            >
               <IconBrandLinkedin
                 style={{ width: rem(18), height: rem(18) }}
                 stroke={1.5}
@@ -37,7 +45,11 @@ export default function FooterSocial() {
             </Link>
           </ActionIcon>
           <ActionIcon size="lg" color="gray" variant="subtle">
-            <Link href="http://leetcode.com/u/adeshkumar1" target="_blank" className="hover:scale-110">
+            <Link
+              href="http://leetcode.com/u/adeshkumar1"
+              target="_blank"
+              className="hover:scale-110"
+            >
               <IconBrandLeetcode
                 style={{ width: rem(18), height: rem(18) }}
                 stroke={1.5}

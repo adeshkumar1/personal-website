@@ -8,7 +8,7 @@ const Navigation = () => {
   };
   return (
     <div
-      className=" fixed p-4 text-white w-[100vw] flex justify-between border-b-[2px] border-black dark:border-white"
+      className="fixed p-4 text-white w-[100vw] flex justify-between border-b-[2px] border-black dark:border-white"
       id="Nav"
     >
       <div
@@ -23,18 +23,18 @@ const Navigation = () => {
       {/* > */}
       {/*   Expierience */}
       {/* </div> */}
-      <div
-        className="hover:cursor-pointer ml-4 flex justify-center items-center font-semibold dark:text-white text-black"
-        onClick={(e) => handleClick("skills")}
-      >
-        Skills
-      </div>
-      <div
-        className="hover:cursor-pointer ml-4 flex justify-center items-center font-semibold dark:text-white text-black"
-        onClick={(e) => handleClick("projects")}
-      >
-        Projects
-      </div>
+      {/* <div */}
+      {/*   className="hover:cursor-pointer ml-4 flex justify-center items-center font-semibold dark:text-white text-black" */}
+      {/*   onClick={(e) => handleClick("skills")} */}
+      {/* > */}
+      {/*   Skills */}
+      {/* </div> */}
+      {/* <div */}
+      {/*   className="hover:cursor-pointer ml-4 flex justify-center items-center font-semibold dark:text-white text-black" */}
+      {/*   onClick={(e) => handleClick("projects")} */}
+      {/* > */}
+      {/*   Projects */}
+      {/* </div> */}
       <div className="scale-75 hover:cursor-pointer">
         <DarkModeToggle />
       </div>

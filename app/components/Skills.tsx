@@ -36,12 +36,12 @@ export default function Skills() {
       {images.map((image, index) => (
         <div
           key={index}
-          className="m-4 h-16 w-20 rounded-3xl bg-gray-900/5 flex justify-center items-center border dark:border-white border-black hover:scale-110"
+          className="m-4 h-16 w-20 rounded-3xl bg-gray-900/5 flex justify-center items-center border dark:border-white border-black"
           style={{
             opacity: 0,
             transform: "translateY(20px)",
             animation: isIntersecting
-              ? `fadeIn 1s ease-in-out forwards`
+              ? `fadeIn 1s ease-in-out forwards ${index * 0.2}s`
               : "none",
           }}
         >
@@ -51,4 +51,3 @@ export default function Skills() {
     </div>
   );
 }
-

@@ -7,11 +7,12 @@ import { TextGenerateEffect } from "./components/text";
 import React from "../public/React logo.png";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
+import Experience from "./components/experience";
 
 export default function Home() {
   const scrollDown = () => {
     document
-      .getElementById("skills")
+      .getElementById("experience")
       ?.scrollIntoView({ behavior: "smooth", block: "center" });
   };
 
@@ -48,13 +49,22 @@ export default function Home() {
         </div>
 
         <div
-          className="dark:text-white text-black mt-[60vh] text-2xl font-bold flex flex-col items-center"
+          id="experience"
+          className="dark:text-white text-black mt-[60vh] text-2xl font-bold flex flex-col items-center -space-y-8"
+        >
+          <div className="m-10">Experiences.</div>
+          <Experience />
+        </div>
+
+        <div
+          className="dark:text-white text-black text-2xl mt-40 font-bold flex flex-col items-center"
           id="skills"
         >
           <div className="-mb-8">Skills.</div>
 
           <Skills />
         </div>
+
         <div
           id="projects"
           className="dark:text-white text-black mt-40 text-2xl font-bold flex flex-col items-center -space-y-8"

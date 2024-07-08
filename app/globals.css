@@ -51,6 +51,10 @@ body {
   opacity: 0;
   animation: example 2s ease-in forwards; /* Apply the animation */
 }
+#experience {
+  opacity: 0;
+  animation: example 2s ease-in forwards; /* Apply the animation */
+}
 
 #projects {
   opacity: 0;
