@@ -18,7 +18,7 @@ const ThreeDCardDemo = ({ project }: { project: string }) => {
           translateZ="50"
           className="text-xl font-bold text-neutral-600 dark:text-white"
         >
-          {project}
+          {project !== "Physics" ? project : project + " engine"}
         </CardItem>
         <CardItem>
           <Image
