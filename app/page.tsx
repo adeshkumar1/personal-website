@@ -10,7 +10,7 @@ import Projects from "./components/Projects";
 import Experience from "./components/experience";
 
 export default function Home() {
-  const scrollDown = () => {
+  const handleLearnMore = () => {
     document
       .getElementById("experience")
       ?.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -43,7 +43,7 @@ export default function Home() {
         <div
           id="learnmore"
           className="dark:text-white text-black font-bold text-xl mt-10 hover:cursor-pointer"
-          onClick={scrollDown}
+          onClick={handleLearnMore}
         >
           Learn more ↓
         </div>
@@ -52,7 +52,7 @@ export default function Home() {
           id="experience"
           className="dark:text-white text-black mt-[60vh] text-2xl font-bold flex flex-col items-center -space-y-8"
         >
-          <div className="m-8">Experiences.</div>
+          <div className="md:m-8 lg:m-8 -m-4">Experiences.</div>
           <Experience />
         </div>
 
