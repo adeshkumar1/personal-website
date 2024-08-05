@@ -52,7 +52,7 @@ export default function Home() {
                id="experience"
                className="dark:text-white text-black mt-[60vh] text-2xl font-bold flex flex-col items-center -space-y-8"
             >
-               <div className="mb-40">Experiences.</div>
+               <div className="mb-40 sm:mb-20">Experiences.</div>
                <Experience />
             </div>
 
