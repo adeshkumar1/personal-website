@@ -42,7 +42,7 @@ export default function Home() {
         </div>
         <div
           id="learnmore"
-          className="dark:text-white text-black font-bold text-xl mt-10 hover:cursor-pointer rounded-full border-2 border-white p-4"
+          className="dark:text-white text-black font-bold text-xl mt-10 hover:cursor-pointer rounded-full border-2 dark:border-white border-black p-4"
           onClick={handleLearnMore}
         >
           Learn more ↓
@@ -57,7 +57,7 @@ export default function Home() {
         </div>
 
         <div
-          className="dark:text-white text-black text-2xl mt-60 mb-40 font-bold flex flex-col items-center"
+          className="dark:text-white text-black text-2xl mt-[35vh] mb-40 font-bold flex flex-col items-center"
           id="skills"
         >
           <div className="">Skills.</div>

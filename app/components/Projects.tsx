@@ -7,7 +7,7 @@ export default function Projects() {
   const [isIntersecting, gridRef] = useIntersectionObserver({ threshold: 0.1 });
   return (
     <div ref={gridRef} id="projects" className="mt-40 w-full ">
-      <div className="flex justify-center space-x-8 flex-wrap">
+      <div className="flex justify-center space-x-[4vw] flex-wrap">
         {projects.map((project, idx) => (
           <div
             style={{
