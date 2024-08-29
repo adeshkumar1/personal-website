@@ -67,7 +67,7 @@ const Experience: React.FC = () => {
           }}
         >
           <h3 className="vertical-timeline-element-title text-black">
-            Teaching Assistant
+            Undergraduate Teaching Assistant
           </h3>
           <h2 className="text-black">Summer 2024</h2>
           <p className=" text-black">
