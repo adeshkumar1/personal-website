@@ -42,7 +42,7 @@ export default function Home() {
         </div>
         <div
           id="learnmore"
-          className="dark:text-white text-black font-bold text-xl mt-10 hover:cursor-pointer rounded-full border-2 dark:border-white border-black p-4"
+          className="dark:text-white text-black font-bold text-xl mt-10 hover:cursor-pointer rounded-full border-2 dark:border-white border-black p-4 text-center"
           onClick={handleLearnMore}
         >
           Learn more ↓
