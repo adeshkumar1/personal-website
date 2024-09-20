@@ -11,9 +11,18 @@ import Experience from "./components/experience";
 
 export default function Home() {
   const handleLearnMore = () => {
-    document
-      .getElementById("experience")
-      ?.scrollIntoView({ behavior: "smooth", block: "center" });
+    const element = document.getElementById("actual_exp");
+    if (element) {
+      const offset = 100; // Change this value to adjust the offset
+      const elementPosition =
+        element.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
   };
 
   return (
@@ -52,7 +61,9 @@ export default function Home() {
           id="experience"
           className="dark:text-white text-black mt-[60vh] text-2xl font-bold flex flex-col items-center -space-y-8"
         >
-          <div className="mb-40 sm:mb-20">Experiences.</div>
+          <div id="actual_exp" className="mb-40 sm:mb-20">
+            Experiences.
+          </div>
           <Experience />
         </div>
 
