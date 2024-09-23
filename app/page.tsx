@@ -77,7 +77,7 @@ export default function Home() {
 
         <div
           id="projects"
-          className="dark:text-white text-black mt-[30vh] text-2xl font-bold flex flex-col items-center -space-y-8"
+          className="dark:text-white text-black my-[30vh] text-2xl font-bold flex flex-col items-center -space-y-8"
         >
           <div>Projects.</div>
           <Projects />
