@@ -25,7 +25,7 @@ const ThreeDCardDemo = ({ project }: { project: string }) => {
             src={
               project === "skinmatch"
                 ? skinmatch
-                : project === "NCHS Bus App"
+                : project === "Bus App"
                   ? nchsbusap
                   : physics
             }
@@ -39,7 +39,7 @@ const ThreeDCardDemo = ({ project }: { project: string }) => {
           as={Link}
           target="_blank"
           href={
-            project !== "NCHS Bus App"
+            project !== "Bus App"
               ? `https://github.com/adeshkumar1/${project}`
               : "https://github.com/NCHS-SE22-23/busApp"
           }

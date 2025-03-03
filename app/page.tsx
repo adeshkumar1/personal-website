@@ -45,9 +45,6 @@ export default function Home() {
           id="aboutme"
           className="dark:text-white text-black lg:w-[60%] md:w-[50%] w-[80%] text-center"
         >
-          I have extensive experience in full-stack development and a strong
-          passion for software engineering. I love problem-solving and I am
-          dedicated to delivering robust solutions to engaging problems.{" "}
         </div>
         <div
           id="learnmore"

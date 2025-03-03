@@ -1,7 +1,8 @@
 import Card from "./card";
 import useIntersectionObserver from "./useIntersectionObserver";
 
-const projects = ["skinmatch", "NCHS Bus App", "Physics"];
+const projects = ["Physics", "skinmatch", "Bus App"];
+
 
 export default function Projects() {
   const [isIntersecting, gridRef] = useIntersectionObserver({ threshold: 0.1 });
