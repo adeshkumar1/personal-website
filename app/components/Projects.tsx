@@ -1,13 +1,12 @@
 import Card from "./card";
 import useIntersectionObserver from "./useIntersectionObserver";
 
-const projects = ["Physics", "skinmatch", "Bus App"];
-
+const projects = ["skinmatch", "Bus App", "Physics", "http-server"];
 
 export default function Projects() {
   const [isIntersecting, gridRef] = useIntersectionObserver({ threshold: 0.1 });
   return (
-    <div ref={gridRef} id="projects" className="mt-40 w-full ">
+    <div ref={gridRef} id="projects" className="mt-40 w-full">
       <div className="flex justify-center space-x-[4vw] flex-wrap">
         {projects.map((project, idx) => (
           <div

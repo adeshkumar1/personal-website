@@ -44,8 +44,7 @@ export default function Home() {
         <div
           id="aboutme"
           className="dark:text-white text-black lg:w-[60%] md:w-[50%] w-[80%] text-center"
-        >
-        </div>
+        ></div>
         <div
           id="learnmore"
           className="dark:text-white text-black font-bold text-xl mt-10 hover:cursor-pointer rounded-full border-2 dark:border-white border-black p-4 text-center"
@@ -65,10 +64,10 @@ export default function Home() {
         </div>
 
         <div
-          className="dark:text-white text-black text-2xl mt-[35vh] mb-40 font-bold flex flex-col items-center"
+          // className="dark:text-white text-black text-2xl mt-[35vh] mb-40 font-bold flex flex-col items-center"
           id="skills"
         >
-          <div className="">Skills.</div>
+          {/* <div className="">Skills.</div> */}
           <Skills />
         </div>
 
