@@ -9,6 +9,7 @@ import UIUC from "../../public/UIUC Logo.jpg";
 import Quant from "../../public/quantlogo.jpeg";
 import Geni from "../../public/Geni Zone Dark Logo.svg";
 import Image from "next/image";
+import Amazon from "../../public/amazon-logo.jpg";
 
 const Experience: React.FC = () => {
   const [isIntersecting, gridRef] = useIntersectionObserver({ threshold: 0.1 });
@@ -29,9 +30,9 @@ const Experience: React.FC = () => {
           }}
           icon={
             <Image
-              src={Quant}
+              src={Amazon}
               alt=""
-              className="rounded-full bg-white scale-110" 
+              className="rounded-full bg-white scale-100"
             ></Image>
           }
           style={{
@@ -40,6 +41,32 @@ const Experience: React.FC = () => {
             transform: "translateY(20px)",
             animation: isIntersecting
               ? "fadeIn 1s ease-in-out forwards"
+              : "none",
+          }}
+        >
+          <h3 className="text-black">Amazon</h3>
+          <h2 className="text-black">Summer 2025</h2>
+          <p className="text-black">VAPR Rust Projector Client and Keepalive</p>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+          className=""
+          contentStyle={{ background: "rgb(200, 200, 200, 1)" }}
+          contentArrowStyle={{
+            borderRight: "7px solid rgb(200, 200, 200, 1)",
+          }}
+          icon={
+            <Image
+              src={Quant}
+              alt=""
+              className="rounded-full bg-white scale-110"
+            ></Image>
+          }
+          style={{
+            gap: "20px", // Adds spacing between children
+            opacity: 0,
+            transform: "translateY(20px)",
+            animation: isIntersecting
+              ? "fadeIn 1s ease-in-out forwards 0.5s"
               : "none",
           }}
         >
@@ -67,7 +94,7 @@ const Experience: React.FC = () => {
             opacity: 0,
             transform: "translateY(20px)",
             animation: isIntersecting
-              ? "fadeIn 1s ease-in-out forwards 0.5s"
+              ? "fadeIn 1s ease-in-out forwards 1.0s"
               : "none",
           }}
         >
@@ -91,7 +118,7 @@ const Experience: React.FC = () => {
             opacity: 0,
             transform: "translateY(20px)",
             animation: isIntersecting
-              ? "fadeIn 1s ease-in-out forwards 1.0s"
+              ? "fadeIn 1s ease-in-out forwards 1.5s"
               : "none",
           }}
         >
@@ -117,7 +144,7 @@ const Experience: React.FC = () => {
             opacity: 0,
             transform: "translateY(20px)",
             animation: isIntersecting
-              ? "fadeIn 1s ease-in-out forwards 1.5s"
+              ? "fadeIn 1s ease-in-out forwards 2.0s"
               : "none",
           }}
         >

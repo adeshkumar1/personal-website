@@ -5,6 +5,7 @@ import { IconBrandGithub } from "@tabler/icons-react";
 import physics from "../../public/physics.png";
 import skinmatch from "../../public/skinmatch.png";
 import nchsbusap from "../../public/nchsbusapp.png";
+import httpserver from "../../public/http-server.png";
 import Image from "next/image";
 import React from "react";
 import { CardBody, CardContainer, CardItem } from "./3d-card";
@@ -27,7 +28,7 @@ const ThreeDCardDemo = ({ project }: { project: string }) => {
                 ? skinmatch
                 : project === "Bus App"
                   ? nchsbusap
-                  : physics
+                  : project === "physics" ? physics : httpserver
             }
             alt=""
             width={300}
