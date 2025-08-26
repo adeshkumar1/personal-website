@@ -72,7 +72,7 @@ const Experience: React.FC = () => {
         >
           <h3 className="text-black">Quant at Illinois</h3>
           <h2 className="text-black">Fall 2024 - Present</h2>
-          <p className="text-black"></p>
+          <p className="text-black">Member</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className=""
@@ -103,7 +103,6 @@ const Experience: React.FC = () => {
             students
           </p>
         </VerticalTimelineElement>
-
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           contentStyle={{ background: "rgb(200, 200, 200, 1)" }}
