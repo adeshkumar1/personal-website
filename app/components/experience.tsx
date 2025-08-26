@@ -46,7 +46,7 @@ const Experience: React.FC = () => {
         >
           <h3 className="text-black">Amazon</h3>
           <h2 className="text-black">Summer 2025</h2>
-          <p className="text-black">VAPR Rust Projector Client and Keepalive</p>
+          <p className="text-black">Vision Assisted Package Retrieval</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className=""
@@ -72,9 +72,7 @@ const Experience: React.FC = () => {
         >
           <h3 className="text-black">Quant at Illinois</h3>
           <h2 className="text-black">Fall 2024 - Present</h2>
-          <p className="text-black">
-            Low latency programming and developing code in C++
-          </p>
+          <p className="text-black"></p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className=""
@@ -123,13 +121,10 @@ const Experience: React.FC = () => {
           }}
         >
           <h3 className="vertical-timeline-element-title text-black">
-            Undergraduate Teaching Assistant
+            Teaching Assistant
           </h3>
           <h2 className="text-black">Summer 2024 - Present</h2>
-          <p className=" text-black">
-            Supporting Computer Science students in C++ fundamentals and Object
-            Oriented Programming
-          </p>
+          <p className=" text-black">CS 128 - Intro to Computer Science II</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
