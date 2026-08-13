@@ -1,34 +1,35 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import type { ReactNode } from "react";
 import "./globals.css";
 import "@mantine/core/styles.css";
-import ForceDarkMode from "./components/ForceDarkMode"; // Adjust the import path if necessary
-
-import { ColorSchemeScript, MantineProvider } from "@mantine/core";
+import { MantineProvider } from "@mantine/core";
+import { ThemeProvider } from "./components/ThemeProvider";
+import { ThemeSync } from "./components/ThemeSync";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "adesh kumar",
-  description: "my portfolio",
+  title: "Adesh Kumar",
+  description: "Computer Science @ UIUC — portfolio, experience, and projects.",
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <ForceDarkMode />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
-        />
-      </head>
+    // suppressHydrationWarning: next-themes and Mantine both set attributes on
+    // <html> before paint, so the server markup differs by design.
+    <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <MantineProvider defaultColorScheme="dark">{children}</MantineProvider>
+        <ThemeProvider>
+          <MantineProvider defaultColorScheme="dark">
+            <ThemeSync />
+            {children}
+          </MantineProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

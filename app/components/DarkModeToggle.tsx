@@ -1,26 +1,46 @@
-// components/DarkModeToggle.tsx
+"use client";
+
 import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 
+/**
+ * Sun / moon theme toggle.
+ *
+ * Which icon shows is driven by the `dark` class through Tailwind variants, not
+ * React state, so the first paint is correct and there's nothing to
+ * hydrate-mismatch. The button carries the positioning and an explicit 30x30
+ * box: the two icons are overlaid inside it, so there is a real hit area to
+ * click and focus. (Previously the icons were positioned individually and the
+ * click handler sat on each <svg>, leaving no focusable control.)
+ */
 const DarkModeToggle = () => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const { resolvedTheme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    const classList = document.documentElement.classList;
-    isDarkMode ? classList.add("dark") : classList.remove("dark");
-  }, [isDarkMode]);
+  useEffect(() => setMounted(true), []);
 
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-  };
+  const isDark = resolvedTheme === "dark";
+  // Before mount the resolved theme is unknown, so stay neutral rather than
+  // announcing the wrong direction.
+  const label = mounted
+    ? `Switch to ${isDark ? "light" : "dark"} mode`
+    : "Toggle color theme";
 
   return (
-    <div id="DarkModeToggle">
+    <button
+      type="button"
+      id="DarkModeToggle"
+      onClick={() => setTheme(isDark ? "light" : "dark")}
+      aria-label={label}
+      title={label}
+      className="absolute -left-8 h-[30px] w-[30px]"
+    >
       <svg
         width="30"
         height="30"
         id="light-icon"
-        className="scale-0 dark:scale-100 transition-transform absolute -left-8"
-        onClick={toggleDarkMode}
+        aria-hidden="true"
+        className="scale-0 dark:scale-100 transition-transform absolute inset-0"
       >
         <circle cx="15" cy="15" r="6" fill="currentColor" />
 
@@ -48,8 +68,8 @@ const DarkModeToggle = () => {
         width="30"
         height="30"
         id="dark-icon"
-        className="scale-100 dark:scale-0 transition-all fixed -left-8"
-        onClick={toggleDarkMode}
+        aria-hidden="true"
+        className="scale-100 dark:scale-0 transition-all absolute inset-0"
       >
         <path
           fill="black"
@@ -59,7 +79,7 @@ const DarkModeToggle = () => {
           A 12 12 0 0 1 23, 5"
         />
       </svg>
-    </div>
+    </button>
   );
 };
 

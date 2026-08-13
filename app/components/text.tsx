@@ -11,7 +11,11 @@ export const TextGenerateEffect = ({
   className?: string;
 }) => {
   const [scope, animate] = useAnimate();
-  let wordsArray = words.split(" ");
+  // Split on any run of whitespace: a plain split(" ") on a string containing a
+  // newline or repeated spaces yields empty entries, which rendered as empty
+  // spans.
+  const wordsArray = words.split(/\s+/).filter(Boolean);
+
   useEffect(() => {
     animate(
       "span",
@@ -25,29 +29,25 @@ export const TextGenerateEffect = ({
     );
   }, [animate]);
 
-  const renderWords = () => {
-    return (
-      <motion.div ref={scope}>
-        {wordsArray.map((word, idx) => {
-          return (
-            <motion.span
-              key={word + idx}
-              className={"dark:text-white text-black opacity-0"}
-            >
-              {word}{" "}
-            </motion.span>
-          );
-        })}
-      </motion.div>
-    );
-  };
-
   return (
     <div className={cn("font-bold", className)}>
       <div className="mt-4">
-        <div className="dark:text-white text-black text-2xl leading-snug tracking-wide flex flex-wrap ">
-          {renderWords()}
-        </div>
+        {/* The page's only h1. Preflight resets heading sizes, so the utility
+            classes below fully determine how this renders. */}
+        <h1 className="dark:text-white text-black text-2xl leading-snug tracking-wide flex flex-wrap ">
+          {/* A span rather than a div so the h1 only contains phrasing content.
+              As a flex item it is blockified, so it lays out identically. */}
+          <motion.span ref={scope}>
+            {wordsArray.map((word, idx) => (
+              <motion.span
+                key={word + idx}
+                className={"dark:text-white text-black opacity-0"}
+              >
+                {word}{" "}
+              </motion.span>
+            ))}
+          </motion.span>
+        </h1>
       </div>
     </div>
   );

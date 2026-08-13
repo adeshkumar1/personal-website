@@ -4,10 +4,15 @@
 
 body {
   @apply font-sans;
-  overflow: scroll;
-  overflow-x: hidden;
+  /* `clip` rather than `hidden`: both prevent sideways scrolling, but `hidden`
+     turns body into a scroll container, which costs the browser its fast
+     scrolling path. The original `overflow: scroll` also forced a permanent,
+     always-visible vertical scrollbar. */
+  overflow-x: clip;
 }
 
+/* Matches the `id="nav"` on the Navigation wrapper. This previously read
+   `#nav` while the element was `id="Nav"`, so the z-index never applied. */
 #nav {
   z-index: 100;
 }
@@ -18,12 +23,11 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  z-index: -1; /* Ensure the particles background is behind other components */
-}
-
-.other-components {
-  position: relative;
-  z-index: 0; /* Ensure your components are above the particles background */
+  z-index: -1; /* Keep the particles background behind other components */
+  /* Pin the canvas to its own compositor layer so repainting it doesn't
+     invalidate the scrolling content stacked above it. The transform alone
+     promotes the layer; `will-change` would only reserve extra GPU memory. */
+  transform: translateZ(0);
 }
 
 .Background {
@@ -34,7 +38,22 @@ body {
   z-index: 20;
 }
 
-@keyframes example {
+/* Scroll-triggered reveal used by the experience, skills, and project grids.
+   Previously defined in components/style.css, which only Skills.tsx imported —
+   so every other animation on the page depended on that one import existing. */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Section-level fade used on first paint. */
+@keyframes fadeInSection {
   from {
     opacity: 0;
   }
@@ -43,20 +62,24 @@ body {
   }
 }
 
-#aboutme {
-  opacity: 0;
-  animation: example 2s ease-in forwards; /* Apply the animation */
-}
-#learnmore {
-  opacity: 0;
-  animation: example 2s ease-in forwards; /* Apply the animation */
-}
-#experience {
-  opacity: 0;
-  animation: example 2s ease-in forwards; /* Apply the animation */
-}
-
+#aboutme,
+#learnmore,
+#experience,
 #projects {
   opacity: 0;
-  animation: example 2s ease-in forwards; /* Apply the animation */
+  animation: fadeInSection 2s ease-in forwards;
+}
+
+/* Respect users who have asked for less motion: show everything, animate none
+   of it. Without this the reveal elements would sit at opacity 0 forever. */
+@media (prefers-reduced-motion: reduce) {
+  #aboutme,
+  #learnmore,
+  #experience,
+  #projects,
+  [data-reveal] {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
